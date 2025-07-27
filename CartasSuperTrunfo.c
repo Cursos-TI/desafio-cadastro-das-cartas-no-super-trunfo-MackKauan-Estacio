@@ -87,7 +87,6 @@ int main() {
 
     // Exibindo as informações da segunda carta:
     printf("\n2° Carta:\n");
-    // O estado não esta sendo capturado mesmo após adicionar o espaço assim como o professor ensinou no curso, não sei como arrumar utilizando o scanf
     printf(" Estado: %c \n Codígo: %.3s \n Nome da Cidade: %s \n População: %i \n Área: %f km² \n PIB: %f bilhões de reais \n Número de Pontos Turísticos: %i \n", estado2, codigoDaCarta2, nomeDaCidade2, populacao2, area2, pib2, numeroDePontosTuristicos2);
      
     return 0;
