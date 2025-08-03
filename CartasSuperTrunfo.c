@@ -26,6 +26,9 @@ int main() {
     float area1;
     float pib1;
     int numeroDePontosTuristicos1;
+    //criando as variáveis do nível aventureiro da primeira carta:
+    float densidadePopulacional1;
+    float PIBperCapita1;
 
     // Declarando as variáveis da segunda carta:
     char estado2;
@@ -35,6 +38,9 @@ int main() {
     float area2;
     float pib2;
     int numeroDePontosTuristicos2;
+    //criando as variáveis do nível aventureiro da segunda carta:
+    float densidadePopulacional2;
+    float PIBperCapita2;
 
     // Coletando os dados da primeira carta:
     printf("Digite as informações da sua 1° Carta\nDigite o Estado da Carta: ");
@@ -59,6 +65,11 @@ int main() {
     scanf("%i", &numeroDePontosTuristicos1);
 
 
+    // Atualizando em armazenando o valor da densidade populacional da primeira carta:
+    densidadePopulacional1 = (float) populacao1 / area1;
+    // Atualizando em armazenando o valor do PIB per Capita da primeira carta:
+    PIBperCapita1 = (float) pib1/populacao1;
+
     // Coletando os dados da segunda carta:
     printf("\n \nDigite as informações da sua 2° Carta\nDigite o Estado da Carta: ");
     scanf(" %c", &estado2);
@@ -81,13 +92,19 @@ int main() {
     printf("\nDigite o Número de Pontos Turísticos da Cidade: ");
     scanf("%i", &numeroDePontosTuristicos2);
 
+    // Atualizando e armazenando a densidade populacional da segunda carta:
+    densidadePopulacional2 = (float) populacao2 / area2;
+    // Atualizando e armazenando o PIB per capita da segunda carta:
+    PIBperCapita2 = (float) pib2/populacao2;
+
+
     // Exibindo as informações da primeira carta:
     printf("\n1° Carta:\n");
-    printf(" Estado: %c \n Codígo: %.3s \n Nome da Cidade: %s \n População: %i \n Área: %f km² \n PIB: %f bilhões de reais \n Número de Pontos Turísticos: %i \n", estado1, codigoDaCarta1, nomeDaCidade1, populacao1, area1, pib1, numeroDePontosTuristicos1);
+    printf(" Estado: %c \n Codígo: %.3s \n Nome da Cidade: %s \n População: %i \n Área: %f km² \n PIB: %f bilhões de reais \n Número de Pontos Turísticos: %i \n Densidade Populacional: %.2f hab/km² \n PIB per Capita: %.2f reais\n", estado1, codigoDaCarta1, nomeDaCidade1, populacao1, area1, pib1, numeroDePontosTuristicos1, densidadePopulacional1, PIBperCapita1);
 
     // Exibindo as informações da segunda carta:
     printf("\n2° Carta:\n");
-    printf(" Estado: %c \n Codígo: %.3s \n Nome da Cidade: %s \n População: %i \n Área: %f km² \n PIB: %f bilhões de reais \n Número de Pontos Turísticos: %i \n", estado2, codigoDaCarta2, nomeDaCidade2, populacao2, area2, pib2, numeroDePontosTuristicos2);
+    printf(" Estado: %c \n Codígo: %.3s \n Nome da Cidade: %s \n População: %i \n Área: %f km² \n PIB: %f bilhões de reais \n Número de Pontos Turísticos: %i \n Densidade Populacional: %.2f hab/km² \n PIB per Capita: %.2f reais\n", estado2, codigoDaCarta2, nomeDaCidade2, populacao2, area2, pib2, numeroDePontosTuristicos2, densidadePopulacional2, PIBperCapita2);
      
     return 0;
 }
